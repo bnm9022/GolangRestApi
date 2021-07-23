@@ -1,3 +1,7 @@
+
+## Testing
+Use go run main.go to run the server
+
 curl -X GET http://localhost:8000/applicationMDs
 curl -X GET http://localhost:8000/applicationMD/0
 curl -X POST -d "C:\Users\kaiyli\Desktop\temp\testdata\valid1.yaml" http://localhost:8000/applicationMD
@@ -10,6 +14,8 @@ curl -X GET "http://localhost:8000/applicationMD?title=Valid%20App%201&&version=
 curl -X PUT -d "C:\Users\kaiyli\Desktop\temp\testdata\valid3.yaml" "http://localhost:8000/applicationMD?title=Valid%20App%202"
 curl -X GET http://localhost:8000/applicationMDs
 curl -X DELETE "http://localhost:8000/applicationMD?title=Valid%20App%202"
+
+Run tests:
 
 C:\Users\kaiyli\Desktop\temp>go test -v
 === RUN   TestGetApplicationMD
@@ -25,6 +31,7 @@ C:\Users\kaiyli\Desktop\temp>go test -v
 PASS
 ok      temp    0.163s
 
+## Curl Output
 C:\Users\kaiyli\Desktop\curl>curl -X GET http://localhost:8000/applicationMDs
 []
 
